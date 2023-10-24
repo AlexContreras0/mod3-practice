@@ -10,3 +10,19 @@ repetitions(‘list’) // result: “LIiSssTttt”
 repetitions(function) // result: “FUuNnnTtttIiiiiOoooooNnnnnnn”
 
 */
+
+function repetitions(input) {
+    let result = "";
+    for (let i = 0; i < input.length; i++) {
+        const letter = input.charAt(i);
+        const repeatedLetter = letter.toUpperCase() + letter.toLowerCase().repeat(i);
+        result += repeatedLetter;
+    }
+    return result;
+}
+
+const inputString = "Code";
+const resultString = repetitions(inputString);
+console.log(resultString);
+
+showContent(5, (`${resultString}`));
