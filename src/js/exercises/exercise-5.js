@@ -25,4 +25,4 @@ const inputString = "Code";
 const resultString = repetitions(inputString);
 console.log(resultString);
 
-showContent(5, (`${resultString}`));
+showContent(5, resultString);

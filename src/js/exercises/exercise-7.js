@@ -30,6 +30,5 @@ function isPalindrome(text, textInv) {
 }
 
 let result = isPalindrome(text, textInv);
-console.log(result);
 
-showContent(7, (`${result}`));
+showContent(7, result);

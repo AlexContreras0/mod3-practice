@@ -14,4 +14,4 @@ for(let i=0; i<vowels.length; i++) {
     }
 }
 
-showContent(4, (`${text}`));
+showContent(4, text);

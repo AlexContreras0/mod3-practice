@@ -5,5 +5,30 @@ que ocupa cada carácter en el abecedario. Para que sea más sencillo, elimina l
 (recuerda que puedes utilizar las funciones de ejercicios anteriores).
 */
 
-const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
+function lowerCase(text) {
+    return text.toLowerCase();
+}
+
+function spaces(text) {
+    return text.replaceAll(" ","");
+}
+
+function characterPositionsInAlphabet(text) {
+    text = removeSpacesAndAccents(text);
+    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    const positions = [];
+
+    for (let i = 0; i < text.length; i++) {
+        const chart = text[i];
+        const position = alphabet.indexOf(chart) + 1;
+        positions.push(position);
+    }
+
+    return positions;
+}
+
+const inputText = "text for the exercise";
+const positions = characterPositionsInAlphabet(inputText);
+
+showContent(8, positions);
