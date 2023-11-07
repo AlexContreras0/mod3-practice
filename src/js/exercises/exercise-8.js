@@ -11,11 +11,11 @@ function lowerCase(text) {
 }
 
 function spaces(text) {
-    return text.replaceAll(" ","");
+    return text.replaceAll(" ", "");
 }
 
 function characterPositionsInAlphabet(text) {
-    text = removeSpacesAndAccents(text);
+    text = spaces(lowerCase(text));
     const alphabet = "abcdefghijklmnopqrstuvwxyz";
     const positions = [];
 
@@ -29,6 +29,5 @@ function characterPositionsInAlphabet(text) {
 }
 
 const inputText = "text for the exercise";
-const positions = characterPositionsInAlphabet(inputText);
 
-showContent(8, positions);
+showContent(8, characterPositionsInAlphabet(inputText));

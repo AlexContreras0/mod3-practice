@@ -4,14 +4,14 @@ Muestra el siguiente mensaje con el resultado de contar el número de vocales qu
 “Number of vowels is <result>”
 */
 
-let text = "texto de práctica para el ejercicio 3";
-const vowels = "aeiouáéíóú";
-let result = 0;
+let txt = "texto de práctica para el ejercicio 3";
+const vowel = "aeiouáéíóú";
+let count = 0;
 
-for(let i=0; i<text.length; i++) {
-    if (vowels.includes(text.charAt(i))) {
-        result++;
-    }  
+for (let i = 0; i < txt.length; i++) {
+    if (vowel.includes(txt.charAt(i))) {
+        count++;
+    }
 }
 
-showContent(3, (`Number of vowels is ${result}`));
+showContent(3, `Number of vowels is ${count}`);

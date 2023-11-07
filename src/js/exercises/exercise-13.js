@@ -22,3 +22,14 @@ Agrupa en un array las peliculas por categorias:
     }
 ]
 */
+
+const moviesGrouped = movies.reduce((grouped, movie) => {
+    const category = movie.category;
+    if (!grouped[category]) {
+        grouped[category] = [];
+    }
+    grouped[category].push(movie);
+    return grouped;
+}, {});
+
+showContent(13, moviesGrouped);

@@ -6,21 +6,20 @@ Dado una cadena de texto, comprueba si es un isograma o no y devuelve un mensaje
 */
 
 
-function isograma(text) {
-    text = text.toLowerCase();
+function isograma(phrase) {
+    phrase = phrase.toLowerCase();
 
-    for (let i = 0; i < text.length; i++) {
-        for (let j = i + 1; j < text.length; j++) {
-            if (text[i] === text[j]) {
-                return `${text} no es isograma`;
+    for (let i = 0; i < phrase.length; i++) {
+        for (let j = i + 1; j < phrase.length; j++) {
+            if (phrase[i] === phrase[j]) {
+                return `${phrase} no es isograma`;
             }
         }
     }
 
-    return `${text} es un isograma`;
+    return `${phrase} es un isograma`;
 }
 
-const text = "hola mundo";
-const result = isograma(text);
+const phrase = "hola mundo";
 
-showContent(17, result);
+showContent(17, isograma(phrase));

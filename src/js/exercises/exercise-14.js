@@ -7,7 +7,7 @@ Muestra un array que solo incluya la pelicula mejor valorada de cada uno de esto
 */
 
 function filterByActor(movies, actor) {
-    return movies.filter (movie => movie.actors.includes(actor));
+    return movies.filter(movie => movie.actors.includes(actor));
 }
 
 function highestRating(movies) {
@@ -21,7 +21,7 @@ function highestRating(movies) {
 
 const result = [];
 
-['Leonardo DiCaprio', 'Robert De Niro', 'Tom Hanks'].for.Each(actor => {
+['Leonardo DiCaprio', 'Robert De Niro', 'Tom Hanks'].forEach(actor => {
     const actorMovies = filterByActor(movies, actor);
     const actorHighest = highestRating(actorMovies);
     result.push(actorHighest);
